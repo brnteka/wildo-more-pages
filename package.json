@@ -1,0 +1,31 @@
+{
+	"name": "wildo-more-pages",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build:style": "postcss -c postcss.config.js -o wildo-more-pages.css src/css/style.css",
+		"build:script": "npx babel src/js/index.js --out-file wildo-more-pages.js",
+		"build:all": "cross-env NODE_ENV=production npm run build:style && npm run build:script"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"autoprefixer": "^10.0.4",
+		"postcss": "^8.1.10",
+		"postcss-import": "^13.0.0",
+		"tailwindcss": "^2.0.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.12.8",
+		"@babel/core": "^7.12.9",
+		"@babel/preset-env": "^7.12.7",
+		"cross-env": "^7.0.2",
+		"cssnano": "^4.1.10",
+		"postcss-cli": "^8.3.0"
+	},
+	"browserslist": [
+		"cover 99.5%"
+	]
+}
